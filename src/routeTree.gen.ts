@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as StudentIndexRouteImport } from './routes/student.index'
+import { Route as LibrarianIndexRouteImport } from './routes/librarian.index'
+import { Route as StudentRequestsRouteImport } from './routes/student.requests'
+import { Route as StudentLoansRouteImport } from './routes/student.loans'
+import { Route as LibrarianStudentsRouteImport } from './routes/librarian.students'
+import { Route as LibrarianRequestsRouteImport } from './routes/librarian.requests'
+import { Route as LibrarianLoansRouteImport } from './routes/librarian.loans'
+import { Route as LibrarianCatalogRouteImport } from './routes/librarian.catalog'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StudentIndexRoute = StudentIndexRouteImport.update({
+  id: '/student/',
+  path: '/student/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibrarianIndexRoute = LibrarianIndexRouteImport.update({
+  id: '/librarian/',
+  path: '/librarian/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentRequestsRoute = StudentRequestsRouteImport.update({
+  id: '/student/requests',
+  path: '/student/requests',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentLoansRoute = StudentLoansRouteImport.update({
+  id: '/student/loans',
+  path: '/student/loans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibrarianStudentsRoute = LibrarianStudentsRouteImport.update({
+  id: '/librarian/students',
+  path: '/librarian/students',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibrarianRequestsRoute = LibrarianRequestsRouteImport.update({
+  id: '/librarian/requests',
+  path: '/librarian/requests',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibrarianLoansRoute = LibrarianLoansRouteImport.update({
+  id: '/librarian/loans',
+  path: '/librarian/loans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibrarianCatalogRoute = LibrarianCatalogRouteImport.update({
+  id: '/librarian/catalog',
+  path: '/librarian/catalog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/librarian/catalog': typeof LibrarianCatalogRoute
+  '/librarian/loans': typeof LibrarianLoansRoute
+  '/librarian/requests': typeof LibrarianRequestsRoute
+  '/librarian/students': typeof LibrarianStudentsRoute
+  '/student/loans': typeof StudentLoansRoute
+  '/student/requests': typeof StudentRequestsRoute
+  '/librarian/': typeof LibrarianIndexRoute
+  '/student/': typeof StudentIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/librarian/catalog': typeof LibrarianCatalogRoute
+  '/librarian/loans': typeof LibrarianLoansRoute
+  '/librarian/requests': typeof LibrarianRequestsRoute
+  '/librarian/students': typeof LibrarianStudentsRoute
+  '/student/loans': typeof StudentLoansRoute
+  '/student/requests': typeof StudentRequestsRoute
+  '/librarian': typeof LibrarianIndexRoute
+  '/student': typeof StudentIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/librarian/catalog': typeof LibrarianCatalogRoute
+  '/librarian/loans': typeof LibrarianLoansRoute
+  '/librarian/requests': typeof LibrarianRequestsRoute
+  '/librarian/students': typeof LibrarianStudentsRoute
+  '/student/loans': typeof StudentLoansRoute
+  '/student/requests': typeof StudentRequestsRoute
+  '/librarian/': typeof LibrarianIndexRoute
+  '/student/': typeof StudentIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/librarian/catalog'
+    | '/librarian/loans'
+    | '/librarian/requests'
+    | '/librarian/students'
+    | '/student/loans'
+    | '/student/requests'
+    | '/librarian/'
+    | '/student/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/librarian/catalog'
+    | '/librarian/loans'
+    | '/librarian/requests'
+    | '/librarian/students'
+    | '/student/loans'
+    | '/student/requests'
+    | '/librarian'
+    | '/student'
+  id:
+    | '__root__'
+    | '/'
+    | '/librarian/catalog'
+    | '/librarian/loans'
+    | '/librarian/requests'
+    | '/librarian/students'
+    | '/student/loans'
+    | '/student/requests'
+    | '/librarian/'
+    | '/student/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LibrarianCatalogRoute: typeof LibrarianCatalogRoute
+  LibrarianLoansRoute: typeof LibrarianLoansRoute
+  LibrarianRequestsRoute: typeof LibrarianRequestsRoute
+  LibrarianStudentsRoute: typeof LibrarianStudentsRoute
+  StudentLoansRoute: typeof StudentLoansRoute
+  StudentRequestsRoute: typeof StudentRequestsRoute
+  LibrarianIndexRoute: typeof LibrarianIndexRoute
+  StudentIndexRoute: typeof StudentIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,12 +156,85 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/student/': {
+      id: '/student/'
+      path: '/student'
+      fullPath: '/student/'
+      preLoaderRoute: typeof StudentIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/librarian/': {
+      id: '/librarian/'
+      path: '/librarian'
+      fullPath: '/librarian/'
+      preLoaderRoute: typeof LibrarianIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/requests': {
+      id: '/student/requests'
+      path: '/student/requests'
+      fullPath: '/student/requests'
+      preLoaderRoute: typeof StudentRequestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/loans': {
+      id: '/student/loans'
+      path: '/student/loans'
+      fullPath: '/student/loans'
+      preLoaderRoute: typeof StudentLoansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/librarian/students': {
+      id: '/librarian/students'
+      path: '/librarian/students'
+      fullPath: '/librarian/students'
+      preLoaderRoute: typeof LibrarianStudentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/librarian/requests': {
+      id: '/librarian/requests'
+      path: '/librarian/requests'
+      fullPath: '/librarian/requests'
+      preLoaderRoute: typeof LibrarianRequestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/librarian/loans': {
+      id: '/librarian/loans'
+      path: '/librarian/loans'
+      fullPath: '/librarian/loans'
+      preLoaderRoute: typeof LibrarianLoansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/librarian/catalog': {
+      id: '/librarian/catalog'
+      path: '/librarian/catalog'
+      fullPath: '/librarian/catalog'
+      preLoaderRoute: typeof LibrarianCatalogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LibrarianCatalogRoute: LibrarianCatalogRoute,
+  LibrarianLoansRoute: LibrarianLoansRoute,
+  LibrarianRequestsRoute: LibrarianRequestsRoute,
+  LibrarianStudentsRoute: LibrarianStudentsRoute,
+  StudentLoansRoute: StudentLoansRoute,
+  StudentRequestsRoute: StudentRequestsRoute,
+  LibrarianIndexRoute: LibrarianIndexRoute,
+  StudentIndexRoute: StudentIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
