@@ -21,7 +21,7 @@ import type { User } from "@/lib/types";
 export const Route = createFileRoute("/librarian/students")({
   head: () => ({
     meta: [
-      { title: "Students — Athenaeum" },
+      { title: "Students — LBMS" },
       { name: "description", content: "Manage student accounts: add, edit, and remove students." },
     ],
   }),

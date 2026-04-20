@@ -15,7 +15,7 @@ import type { Book } from "@/lib/types";
 export const Route = createFileRoute("/student/")({
   head: () => ({
     meta: [
-      { title: "Browse — Athenaeum" },
+      { title: "Browse — LBMS" },
       { name: "description", content: "Browse the school library catalog and request books before pickup." },
     ],
   }),

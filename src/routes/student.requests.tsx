@@ -12,7 +12,7 @@ import type { BookRequest, RequestStatus } from "@/lib/types";
 export const Route = createFileRoute("/student/requests")({
   head: () => ({
     meta: [
-      { title: "My Requests — Athenaeum" },
+      { title: "My Requests — LBMS" },
       { name: "description", content: "Track the status of your book requests." },
     ],
   }),

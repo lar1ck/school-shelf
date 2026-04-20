@@ -11,7 +11,7 @@ import { userService } from "@/services/userService";
 export const Route = createFileRoute("/librarian/")({
   head: () => ({
     meta: [
-      { title: "Librarian Dashboard — Athenaeum" },
+      { title: "Librarian Dashboard — LBMS" },
       { name: "description", content: "Library overview: catalog, requests, loans, and overdue books." },
     ],
   }),

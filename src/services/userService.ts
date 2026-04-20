@@ -44,13 +44,13 @@ export const userService = {
       const seed: User[] = [
         {
           id: uid(),
-          name: "Ms. Carter",
+          name: "Ms. Jane",
           role: "librarian",
           createdAt: new Date().toISOString(),
         },
         {
           id: uid(),
-          name: "Alex Johnson",
+          name: "Stella",
           role: "student",
           classGrade: "10A",
           studentId: "S-1001",
@@ -58,7 +58,7 @@ export const userService = {
         },
         {
           id: uid(),
-          name: "Maya Patel",
+          name: "Iriza",
           role: "student",
           classGrade: "11B",
           studentId: "S-1002",
@@ -66,6 +66,22 @@ export const userService = {
         },
       ];
       save(seed);
+      return;
     }
+    // Migrate legacy demo names to new ones (one-shot, idempotent).
+    const renameMap: Record<string, string> = {
+      "Ms. Carter": "Ms. Jane",
+      "Alex Johnson": "Stella",
+      "Maya Patel": "Iriza",
+    };
+    let changed = false;
+    const migrated = users.map((u) => {
+      if (renameMap[u.name]) {
+        changed = true;
+        return { ...u, name: renameMap[u.name] };
+      }
+      return u;
+    });
+    if (changed) save(migrated);
   },
 };
