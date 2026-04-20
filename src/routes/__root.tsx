@@ -47,6 +47,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "LBMS — Secondary School Library" },
+      { name: "description", content: "School Shelf is a role-based library circulation system for secondary schools." },
+      { property: "og:description", content: "School Shelf is a role-based library circulation system for secondary schools." },
+      { name: "twitter:description", content: "School Shelf is a role-based library circulation system for secondary schools." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3ae5bf59-4e17-4959-bcb0-3aaf9abb0561/id-preview-26a774b6--217c4226-2422-4b69-954d-7cc70885bdc9.lovable.app-1776697905211.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3ae5bf59-4e17-4959-bcb0-3aaf9abb0561/id-preview-26a774b6--217c4226-2422-4b69-954d-7cc70885bdc9.lovable.app-1776697905211.png" },
     ],
     links: [
       {
