@@ -25,7 +25,7 @@ import type { BookRequest, Loan } from "@/lib/types";
 export const Route = createFileRoute("/librarian/loans")({
   head: () => ({
     meta: [
-      { title: "Loans — Athenaeum" },
+      { title: "Loans — LBMS" },
       { name: "description", content: "Hand out approved books and track active loans and overdue items." },
     ],
   }),

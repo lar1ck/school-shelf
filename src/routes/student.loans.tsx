@@ -13,7 +13,7 @@ import type { Loan } from "@/lib/types";
 export const Route = createFileRoute("/student/loans")({
   head: () => ({
     meta: [
-      { title: "My Loans — Athenaeum" },
+      { title: "My Loans — LBMS" },
       { name: "description", content: "Your current and past borrowed books with due dates." },
     ],
   }),

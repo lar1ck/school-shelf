@@ -32,14 +32,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Athenaeum — Secondary School Library" },
+      { title: "LBMS — Secondary School Library" },
       {
         name: "description",
         content:
           "Role-based library circulation system for secondary schools. Librarians manage books and lending; students browse and request titles online.",
       },
-      { name: "author", content: "Athenaeum" },
-      { property: "og:title", content: "Athenaeum — Secondary School Library" },
+      { name: "author", content: "LBMS" },
+      { property: "og:title", content: "LBMS — Secondary School Library" },
       {
         property: "og:description",
         content:

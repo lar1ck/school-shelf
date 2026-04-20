@@ -35,7 +35,7 @@ function LandingPage() {
             <BookOpen className="h-6 w-6" />
           </div>
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Athenaeum</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">LBMS</h1>
             <p className="text-sm text-muted-foreground">
               School library circulation, simplified.
             </p>

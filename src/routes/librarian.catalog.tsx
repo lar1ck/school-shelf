@@ -23,7 +23,7 @@ import type { Book } from "@/lib/types";
 export const Route = createFileRoute("/librarian/catalog")({
   head: () => ({
     meta: [
-      { title: "Catalog — Athenaeum" },
+      { title: "Catalog — LBMS" },
       { name: "description", content: "Add and manage books in the school library catalog." },
     ],
   }),
