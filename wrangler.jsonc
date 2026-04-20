@@ -1,8 +1,7 @@
 {
-  "name": "school-shelf",
-  "pages_build_output_dir": "dist/client",
-  "compatibility_date": "2024-11-01", 
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tanstack-start-app",
+  "compatibility_date": "2025-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry"
 }

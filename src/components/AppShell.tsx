@@ -41,7 +41,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2 font-semibold">
             <BookOpen className="h-5 w-5 text-primary" />
-            <span className="hidden sm:inline">LBMS</span>
+            <span className="hidden sm:inline">Athenaeum</span>
           </Link>
           <nav className="flex-1 flex items-center gap-1 overflow-x-auto">
             {nav.map((item) => {
